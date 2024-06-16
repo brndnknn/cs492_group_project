@@ -1,5 +1,6 @@
 # app.py
 from flask import Flask, render_template, request, redirect, url_for
+from flask_menu import Menu  # Install Flask-Menu (`pip install Flask-Menu`)
 
 app = Flask(__name__)
 
@@ -7,9 +8,13 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
+# Configure Flask-Menu
+#menu = Menu(app)
+#menu.add_item("Menu", url_for('menu'))  # Add a menu link
+
 @app.route('/menu')
 def menu():
-    return render_template('menu.html')
+    return render_template('menu.html', menu_data=menu_data)
 
 @app.route('/account', methods=['GET', 'POST'])
 def account():
