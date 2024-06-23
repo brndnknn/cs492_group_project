@@ -7,11 +7,39 @@
 </head>
 <body>
     <h1>Login</h1>
-    <form action="login.php" method="post">  <label for="username">Username or Email:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Login</button>
-    </form>
+    <form id="login-form">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+  <button type="submit">Login</button>
+</form>
+<script>
+  const loginForm = document.getElementById('login-form');
+  loginForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Send login request with username and password securely (e.g., using fetch with HTTPS)
+    fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        // Login successful, redirect or display success message
+      } else {
+        // Login failed, display error message
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Handle errors appropriately (without revealing details)
+    });
+  });
+</script>
 </body>
 </html>
