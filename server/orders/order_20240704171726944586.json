@@ -1,0 +1,16 @@
+{
+    "name": "brandon",
+    "email": "brandon@email.com",
+    "address": "123 main st",
+    "paymentInfo": "card info",
+    "items": [
+        {
+            "description": "Simple yet delicious, with a base of tomato sauce, fresh mozzarella, and fragrant basil.",
+            "id": 1,
+            "image": "margherita.jpg",
+            "name": "Margherita Pizza",
+            "price": 12.99,
+            "quantity": 1
+        }
+    ]
+}

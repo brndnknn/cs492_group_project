@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Margherita Pizza",
+        "price": 12.99,
+        "image": "margherita.jpg",
+        "description": "Simple yet delicious, with a base of tomato sauce, fresh mozzarella, and fragrant basil."
+    },
+    {
+        "id": 2,
+        "name": "Pepperoni Pizza",
+        "price": 13.99,
+        "image": "pepperoni.jpg",
+        "description": "A classic favorite loaded with savory pepperoni slices."
+    },
+    {
+        "id": 3,
+        "name": "Hawaiian Pizza",
+        "price": 14.99,
+        "image": "hawaiian.jpg",
+        "description": "A controversial yet beloved combination of ham and pineapple chunks on a sweet and tangy tomato sauce base."
+    }
+]
