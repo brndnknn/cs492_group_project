@@ -8,7 +8,7 @@ import CartProviderWrapper from "../components/cartProviderWrapper";
 export default function Root() {
   return (
     <div>
-      <h1 className="header">Welcome to Pizza Place!</h1>
+      <h1 className="header">Welcome to Pizza Palace!</h1>
       <Navbar />
       <CartProviderWrapper>
         <Outlet />
